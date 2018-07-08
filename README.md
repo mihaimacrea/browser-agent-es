@@ -1,27 +1,22 @@
 # BrowserAgent
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Install Angular
+This project is build using Angular 6.  
+In order to install and run it, please follow these steps:  
+1. Make sure NodeJS version is 8.9+ (`node -v`)
+2. You need npm installed (usually it is shipped with NodeJS)
+3. Make sure you have installed the latest version of Angular Cli (`npm install -g @angular/cli`). If you have a previous version of this, uninstall it and then run the before mentioned command.
+4. Clone the project locally
+5. `cd` into the project directory and run `npm install`
 
-## Development server
+## Install Elastic Search
+1. Download Elastic Search 5.5.3 from https://www.elastic.co/downloads/past-releases/elasticsearch-5-5-3
+2. Add the following properties to the file elasticsearch.yml under config:  
+cluster.routing.allocation.disk.threshold_enabled: false  
+http.cors.enabled: true  
+http.cors.allow-origin: "*"  
+3. `cd` into the Elastic Search directory and execute `./bin/elasticsearch`. This will start a cluster on port 9200. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Run the project
+`cd` into the Angular Application directory.  
+Project ready to run by executing `ng serve`. Navigate to `http://localhost:4200/`.
